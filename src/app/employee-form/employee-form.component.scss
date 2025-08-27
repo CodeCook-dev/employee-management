@@ -1,0 +1,295 @@
+/* Employee Form Component Styles */
+
+.employee-form-view {
+  position: relative;
+  background-color: white;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* View Headers */
+.view-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.view-header h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  flex: 1;
+  text-align: center;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.back-btn:hover {
+  background: #f5f5f5;
+}
+
+.delete-btn-icon {
+  background: none;
+  border: none;
+  color: #f44336;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.delete-btn-icon:hover {
+  background: #ffebee;
+}
+
+/* Forms */
+.employee-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  padding: 0px 16px;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0px 16px;
+  padding: 8px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.2s ease;
+  background: white;
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-with-icon input {
+  padding-left: 44px;
+}
+
+.form-group input,
+.form-group select,
+.form-group app-mobile-select {
+  outline: none;
+  border: none;
+  width: 100%;
+  padding: 0px 0px 0px 12px;
+}
+
+/* Readonly and disabled states */
+.form-group input.readonly,
+.form-group select.disabled {
+  background-color: #f5f5f5;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.form-group select.disabled {
+  opacity: 0.7;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+  justify-content: flex-end;
+  padding: 12px 16px;
+  border-top: 2px solid #f2f2f2;
+}
+
+.btn {
+  flex: 1;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: #1da1f2;
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #1565c0;
+  transform: translateY(-1px);
+}
+
+.btn-primary:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-secondary {
+  background: #edf8ff;
+  color: #1da1f2;
+}
+
+.btn-secondary:hover {
+  background: #e0e0e0;
+}
+
+.btn-danger {
+  background: #f44336;
+  color: white;
+}
+
+.btn-danger:hover {
+  background: #d32f2f;
+  transform: translateY(-1px);
+}
+
+.date-separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Responsive Design - Tablet and Desktop */
+@media (min-width: 481px) {
+  /* Enhanced Forms */
+  .view-header {
+    margin-bottom: 40px;
+    padding-bottom: 24px;
+  }
+
+  .view-header h2 {
+    font-size: 24px;
+  }
+
+  .employee-form-view {
+    background-color: transparent;
+  }
+
+  .employee-form {
+    gap: 24px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .form-group {
+    gap: 10px;
+  }
+
+  .form-group label {
+    font-size: 15px;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 16px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+
+  .form-actions {
+    gap: 16px;
+  }
+
+  .btn {
+    padding: 16px 32px;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+}
+
+/* Large Desktop Enhancements */
+@media (min-width: 1200px) {
+  .employee-form {
+    max-width: 700px;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 18px 24px;
+    font-size: 18px;
+  }
+
+  .btn {
+    padding: 18px 36px;
+    font-size: 18px;
+  }
+}
+
+/* Extra Large Desktop */
+@media (min-width: 1600px) {
+  .employee-form {
+    max-width: 800px;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 20px 28px;
+    font-size: 20px;
+  }
+
+  .btn {
+    padding: 20px 40px;
+    font-size: 20px;
+  }
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 480px) {
+  .view-header {
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+  }
+
+  .view-header h2 {
+    font-size: 18px;
+  }
+
+  .employee-form {
+    gap: 24px;
+    padding: 24px 0px 0px;
+    flex: 1;
+  }
+
+  .form-actions {
+    gap: 10px;
+  }
+
+  .form-group input {
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px 15px;
+    border-radius: 6px;
+    flex: 0;
+    flex-basis: 73px;
+  }
+}

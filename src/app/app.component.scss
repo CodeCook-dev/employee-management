@@ -1,0 +1,113 @@
+/* App Container and Header Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    'Roboto',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Helvetica,
+    Arial,
+    sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+.app-container {
+  max-width: 480px;
+  margin: 0 auto;
+  background: white;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.app-header {
+  background: #1da1f2;
+  color: white;
+  padding: 19.5px 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.app-header h1 {
+  font-size: 18px;
+  line-height: 100%;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Main Content */
+.main-content {
+  background-color: #f2f2f2;
+  flex: 1;
+}
+
+/* Responsive Design - Tablet and Desktop */
+@media (min-width: 481px) {
+  .app-container {
+    max-width: 100%;
+    margin: 0;
+    background: #f8f9fa;
+  }
+
+  .app-header {
+    padding: 24px 40px;
+    text-align: left;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .app-header h1 {
+    font-size: 28px;
+    font-weight: 500;
+  }
+
+  .main-content {
+    padding: 40px;
+    padding-bottom: 120px;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+/* Large Desktop Enhancements */
+@media (min-width: 1200px) {
+  .main-content {
+    padding: 60px;
+    max-width: 1600px;
+  }
+}
+
+/* Extra Large Desktop */
+@media (min-width: 1600px) {
+  .main-content {
+    padding: 80px;
+    max-width: 1800px;
+  }
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 480px) {
+  .app-container {
+    max-width: 100%;
+  }
+  .main-content {
+    display: flex;
+    flex-direction: column;
+  }
+}
