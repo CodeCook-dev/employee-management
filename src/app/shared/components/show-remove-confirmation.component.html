@@ -1,0 +1,14 @@
+<div class="remove-confirmation-overlay" [class.open]="isVisible">
+  <div class="remove-confirmation-modal">
+    <div class="modal-header">
+      <h3>Employee Removed</h3>
+    </div>
+    <div class="modal-content">
+      <p>The employee has been removed successfully.</p>
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-secondary" (click)="onUndo()">Undo</button>
+      <button class="btn btn-primary" (click)="onClose()">Close</button>
+    </div>
+  </div>
+</div>
