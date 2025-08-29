@@ -4,6 +4,7 @@ import { MobileSelectComponent } from './mobile-select.component';
 import { DatePickerComponent } from './date-picker.component';
 import { CalendarIconComponent } from '../icons/calendar-icon.component';
 import { ShowRemoveConfirmationComponent } from './show-remove-confirmation.component';
+import { CustomSelectComponent } from './custom-select.component';
 
 @NgModule({
   declarations: [
@@ -11,6 +12,7 @@ import { ShowRemoveConfirmationComponent } from './show-remove-confirmation.comp
     DatePickerComponent,
     CalendarIconComponent,
     ShowRemoveConfirmationComponent,
+    CustomSelectComponent,
   ],
   imports: [CommonModule],
   exports: [
@@ -18,6 +20,7 @@ import { ShowRemoveConfirmationComponent } from './show-remove-confirmation.comp
     DatePickerComponent,
     CalendarIconComponent,
     ShowRemoveConfirmationComponent,
+    CustomSelectComponent,
   ],
 })
 export class ComponentsModule {}

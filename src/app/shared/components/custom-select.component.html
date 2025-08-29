@@ -1,0 +1,81 @@
+<div class="custom-select" [class.disabled]="disabled" [class.open]="isOpen">
+  <!-- Hidden input for form validation -->
+  <input
+    type="hidden"
+    [name]="name"
+    [id]="id"
+    [value]="selectedValue"
+    [required]="required"
+  />
+
+  <!-- Select Trigger Button -->
+  <button
+    type="button"
+    class="select-trigger"
+    [class.disabled]="disabled"
+    (click)="toggleDropdown()"
+    [attr.aria-expanded]="isOpen"
+    [attr.aria-haspopup]="true"
+    [attr.aria-label]="placeholder"
+    role="combobox"
+  >
+    <span class="select-value" [class.placeholder]="!selectedOption">
+      {{ getDisplayText() }}
+    </span>
+
+    <!-- Custom Arrow Icon -->
+    <svg
+      class="select-arrow"
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+    >
+      <polyline points="6,9 12,15 18,9"></polyline>
+    </svg>
+  </button>
+
+  <!-- Dropdown Menu -->
+  <div
+    class="dropdown-menu"
+    [class.show]="isOpen"
+    role="listbox"
+    [attr.aria-label]="placeholder"
+  >
+    <div class="dropdown-content">
+      <div
+        *ngFor="let option of options; trackBy: trackByValue"
+        class="dropdown-option"
+        [class]="getSelectedOptionClass(option)"
+        [class.disabled]="option.disabled"
+        (click)="selectOption(option)"
+        role="option"
+        [attr.aria-selected]="option.value === selectedValue"
+        [attr.aria-disabled]="option.disabled"
+      >
+        <span class="option-label">{{ option.label }}</span>
+
+        <!-- Checkmark for selected option -->
+        <svg
+          *ngIf="option.value === selectedValue"
+          class="checkmark"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <polyline points="20,6 9,17 4,12"></polyline>
+        </svg>
+      </div>
+
+      <!-- No options message -->
+      <div *ngIf="options.length === 0" class="no-options">
+        <span>No options available</span>
+      </div>
+    </div>
+  </div>
+</div>

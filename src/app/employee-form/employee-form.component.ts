@@ -40,6 +40,13 @@ export class EmployeeFormComponent implements OnInit {
     { value: 'Product Owner', label: 'Product Owner' },
   ];
 
+  roleOptionsForCustomSelect = [
+    { value: 'Product Designer', label: 'Product Designer' },
+    { value: 'Flutter Developer', label: 'Flutter Developer' },
+    { value: 'QA Tester', label: 'QA Tester' },
+    { value: 'Product Owner', label: 'Product Owner' },
+  ];
+
   showRemoveConfirmation = false;
   deletedEmployee: Employee | null = null;
 

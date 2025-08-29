@@ -33,21 +33,18 @@
           [disabled]="!canEdit()"
           (valueChange)="onRoleChange($event)"
         />
-        <!-- Desktop/Tablet Select -->
-        <select
+        <!-- Desktop/Tablet Custom Select -->
+        <app-custom-select
           *ngIf="!isMobile"
-          id="role"
-          name="role"
-          [(ngModel)]="employee.role"
+          [options]="roleOptionsForCustomSelect"
+          [selectedValue]="employee.role"
+          [placeholder]="'Select role'"
           [disabled]="!canEdit()"
-          [class.disabled]="!canEdit()"
-          required
-        >
-          <option value="Product Designer">Product Designer</option>
-          <option value="Flutter Developer">Flutter Developer</option>
-          <option value="QA Tester">QA Tester</option>
-          <option value="Product Owner">Product Owner</option>
-        </select>
+          [required]="true"
+          name="role"
+          id="role"
+          (valueChange)="onRoleChange($event)"
+        />
       </div>
     </div>
 
